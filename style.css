@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#title{
+    text-align: center;
+    font-size: 40px;
+    margin: 15px 0;
+    
+    /* Stylish gradient text */
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 80, 80, 0.5);
+
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 2px;
+}
+
+#title{
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#score{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+#game{
+    width: 600px;
+    height: 300px;
+    border: 2px solid #111;
+    margin: auto;
+    background-image: url("https://img.freepik.com/premium-vector/snowy-mountains-fir-trees-starry-sky-pixel-art-game-location-8-bit-retro-backdrop-seamless_148553-735.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+#dino{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 225px;
+    background-image: url("dino-art.png");
+    background-size: cover;
+}
+
+
+#rock{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 195px;
+    left: 565px;
+    background-image: url("rock.png");
+    background-size: cover;
+    animation: rock 1.5s linear infinite;
+}
+
+@keyframes rock {
+    0%{ left: 565px; }
+    100%{ left: -40px; }
+}
+
+
+.jump-animation{
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0%{ top: 225px; }
+    50%{ top: 150px; }
+    100%{ top: 225px; }
+}
+
+
+#startScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#startScreen h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#startBtn{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: #ff512f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#startBtn:hover{
+    background: #dd2476;
+}
